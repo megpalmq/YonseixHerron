@@ -64,6 +64,7 @@ body {
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 .navbar .logo .logo-highlight {
   color: #f8d6e6;
