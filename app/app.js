@@ -1,3 +1,4 @@
+// Mobile Menu Toggle
 const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.querySelector(".nav-links");
 
@@ -17,7 +18,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Project Data (same as before)
+// Project Data
 const projectData = {
   project1: {
     title: "Project Title 1",

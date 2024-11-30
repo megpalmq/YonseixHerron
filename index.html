@@ -16,7 +16,7 @@
     <header class="header">
       <nav class="navbar">
         <div class="container">
-          <a href="#home" class="logo">Yonsei x Herron</a>
+          <a href="#home" class="logo">Yonsei x Herron </a>
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -34,16 +34,25 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1 class="header-title">
-            <span>Bridging</span>
-            <span class="highlight">Communities</span>
+            Herron School of Art and Design x Yonsei University 2024
           </h1>
           <p class="header-subtitle">
-            Tackling Food Scarcity and Health Issues Across Borders
+            Explore the collaboration between Yonsei and IU Indy
           </p>
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">Explore Projects</a>
-            <a href="#about" class="btn btn-secondary">Learn More</a>
-          </div>
+        </div>
+
+        <!-- Floating Logos -->
+        <div class="floating-logos">
+          <img
+            src="assets/images/iu-logo.png"
+            alt="IU Indy Logo"
+            class="logo-iu"
+          />
+          <img
+            src="assets/images/yonsei-logo.png"
+            alt="Yonsei University Logo"
+            class="logo-yonsei"
+          />
         </div>
       </div>
     </header>
@@ -56,7 +65,7 @@
             <h2 class="section-title">About the Collaboration</h2>
             <p>
               Yonsei University and Herron School of Art + Design students unite
-              to create impactful solutions addressing food scarcity and health
+              to create impactful designs addressing food scarcity and health
               challenges for elderly communities in Korea and Indianapolis. In
               this project, each team was assigned a distinct topic, with the
               goal of presenting the information in a creative and engaging way.
@@ -124,6 +133,90 @@
                 </p>
               </div>
             </div>
+            <div class="project-card" id="project2">
+              <img
+                src="assets/images/project2.jpg"
+                alt="Project 2"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 2</h3>
+                <p>
+                  An interactive project that tackles elderly health with
+                  creative and engaging designs.
+                </p>
+              </div>
+            </div>
+            <div class="project-card" id="project2">
+              <img
+                src="assets/images/project2.jpg"
+                alt="Project 2"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 2</h3>
+                <p>
+                  An interactive project that tackles elderly health with
+                  creative and engaging designs.
+                </p>
+              </div>
+            </div>
+            <div class="project-card" id="project2">
+              <img
+                src="assets/images/project2.jpg"
+                alt="Project 2"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 2</h3>
+                <p>
+                  An interactive project that tackles elderly health with
+                  creative and engaging designs.
+                </p>
+              </div>
+            </div>
+            <div class="project-card" id="project2">
+              <img
+                src="assets/images/project2.jpg"
+                alt="Project 2"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 2</h3>
+                <p>
+                  An interactive project that tackles elderly health with
+                  creative and engaging designs.
+                </p>
+              </div>
+            </div>
+            <div class="project-card" id="project2">
+              <img
+                src="assets/images/project2.jpg"
+                alt="Project 2"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 2</h3>
+                <p>
+                  An interactive project that tackles elderly health with
+                  creative and engaging designs.
+                </p>
+              </div>
+            </div>
+            <div class="project-card" id="project1">
+              <img
+                src="assets/images/project1.jpg"
+                alt="Project 1"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 1</h3>
+                <p>
+                  A detailed description highlighting the innovative approach to
+                  food scarcity solutions.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -147,6 +240,20 @@
           </div>
         </div>
         <button id="go-back" class="GB">Go Back</button>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <p>If you have any questions, feel free to contact us!</p>
+
+          <a
+            href="mailto:meganpalmquist@outlook.com?subject=Inquiry from Contact Form from HerronxYonsei Webpage"
+            class="email-button"
+          >
+            <button type="button">Email Us</button>
+          </a>
+        </div>
       </section>
     </main>
 
@@ -181,6 +288,40 @@
         </p>
       </div>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script>
+      // Initialize EmailJS with your user ID
+      emailjs.init("EksaIfxFS12zDRbFk");
+
+      // Add event listener to the button
+      document
+        .getElementById("email-button")
+        .addEventListener("click", function () {
+          // Prepare the data you want to send
+          const emailData = {
+            to_name: "Megan Palmquist",
+            from_email: "meganpalmquist@outlook.com", // You can replace this with the dynamic value if needed
+            message:
+              "This is an inquiry from the contact page of the YonseixHerron Project webpage",
+            to_email: "meganpalmquist@outlook.com", // Replace with your actual email
+          };
+
+          // Send email using EmailJS
+          emailjs.send("service_14ybicu", "template_5tol5bu", emailData).then(
+            function (response) {
+              console.log("Email sent successfully", response);
+              alert("Your message has been sent!");
+            },
+            function (error) {
+              console.log("Error sending email", error);
+              alert("There was an error sending your message.");
+            }
+          );
+        });
+    </script>
 
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script src="app/app.js"></script>
