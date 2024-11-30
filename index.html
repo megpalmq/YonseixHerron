@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Yonsei x Herron Collaboration</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ske0puo.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="container">
+          <a href="#home" class="logo">Yonsei x Herron</a>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="header-title">
+            <span>Bridging</span>
+            <span class="highlight">Communities</span>
+          </h1>
+          <p class="header-subtitle">
+            Tackling Food Scarcity and Health Issues Across Borders
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="about-content">
+            <h2 class="section-title">About the Collaboration</h2>
+            <p>
+              Yonsei University and Herron School of Art + Design students unite
+              to create impactful solutions addressing food scarcity and health
+              challenges for elderly communities in Korea and Indianapolis. In
+              this project, each team was assigned a distinct topic, with the
+              goal of presenting the information in a creative and engaging way.
+              To ensure variety and uniqueness, each team was assigned a
+              different style of displaying their data, whether it be through an
+              infographic poster or an infographic brochure. These formats
+              allowed us to tailor our design to the nature of the topic, using
+              visuals, typography, and layout to communicate the message
+              effectively. By diversifying the presentation styles, we were able
+              to showcase a wide range of design techniques and visual
+              storytelling methods, each aligned with the specific needs and
+              tone of the assigned topic.
+              <br />
+              <br />
+              The teams consitent of students from both universities, where they
+              each assigned roles that included: project leader, designers,
+              researchers, and project cordinator. Each team member was
+              responsible for their assigned role, and they worked together to
+              create a cohesive and impactful project. The project was a great
+              opportunity for students to learn from each other and gain
+              valuable experience in collaboration and project management.
+            </p>
+          </div>
+          <img
+            src="assets/images/about-collaboration.jpg"
+            alt="Collaboration"
+            class="about-image"
+          />
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <h2 class="section-title">Student Projects</h2>
+          <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card" id="project1">
+              <img
+                src="assets/images/project1.jpg"
+                alt="Project 1"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 1</h3>
+                <p>
+                  A detailed description highlighting the innovative approach to
+                  food scarcity solutions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card" id="project2">
+              <img
+                src="assets/images/project2.jpg"
+                alt="Project 2"
+                class="project-image"
+              />
+              <div class="project-details">
+                <h3>Project Title 2</h3>
+                <p>
+                  An interactive project that tackles elderly health with
+                  creative and engaging designs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="project-details"
+        class="project-details-section"
+        style="display: none"
+      >
+        <div class="container">
+          <h2 id="project-title">Project Title</h2>
+          <div class="project-details-content">
+            <img
+              id="project-image"
+              src=""
+              alt="Project Image"
+              class="project-image"
+            />
+            <p id="project-members">Group Members:</p>
+            <p id="project-description">Description of the project.</p>
+          </div>
+        </div>
+        <button id="go-back" class="GB">Go Back</button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-logo">
+            <h3><span class="logo-highlight">Yonsei</span> x Herron</h3>
+            <p>Bridging Communities Through Creativity</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <p class="footer-bottom">
+          © 2024 Yonsei University & Herron School of Art + Design. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>
