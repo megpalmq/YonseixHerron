@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Yonsei x Herron Collaboration</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -62,203 +81,7 @@
     </header>
 
     <main>
-      <!-- About Section -->
-      <section id="about" class="about-section">
-        <div class="container">
-          <div class="about-content">
-            <h2 class="section-title">About the Collaboration</h2>
-            <p>
-              Yonsei University and Herron School of Art + Design students unite
-              to create impactful designs addressing food scarcity and health
-              challenges for elderly communities in Korea and Indianapolis. In
-              this project, each team was assigned a distinct topic, with the
-              goal of presenting the information in a creative and engaging way.
-              To ensure variety and uniqueness, each team was assigned a
-              different style of displaying their data, whether it be through an
-              infographic poster or an infographic brochure. These formats
-              allowed us to tailor our design to the nature of the topic, using
-              visuals, typography, and layout to communicate the message
-              effectively. By diversifying the presentation styles, we were able
-              to showcase a wide range of design techniques and visual
-              storytelling methods, each aligned with the specific needs and
-              tone of the assigned topic.
-              <br />
-              <br />
-              The teams consitent of students from both universities, where they
-              each assigned roles that included: project leader, designers,
-              researchers, and project cordinator. Each team member was
-              responsible for their assigned role, and they worked together to
-              create a cohesive and impactful project. The project was a great
-              opportunity for students to learn from each other and gain
-              valuable experience in collaboration and project management.
-            </p>
-          </div>
-          <img
-            src="assets/images/about-collaboration.jpg"
-            alt="Collaboration"
-            class="about-image"
-          />
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="projects-section">
-        <div class="container">
-          <h2 class="section-title">Student Projects</h2>
-          <div class="project-grid">
-           
-            <div class="project-card" id="project1">
-              <img
-                src="assets/images/project1.jpg"
-                alt="Project 1"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 1 🍔</h3>
-                <p>
-                  Food Access in Indianapolis & through the Boner Center for the elderly/ Songdo or Seoul largely.
-                </p>
-              </div>
-            </div>
-
-           
-            <div class="project-card" id="project2">
-              <img
-                src="assets/images/project2.jpg"
-                alt="Project 2"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 2 🍽️</h3>
-                <p>
-                  Focused on food nutrition, diet/amount for the day–What makes up a balanced diet for the elderly? 
-                </p>
-              </div>
-            </div>
-            <div class="project-card" id="project3">
-              <img
-                src="assets/images/realworldimage.jpg"
-                alt="Project 2"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 3 🩸</h3>
-                <p>
-                  Impact of Diet on Blood Pressure and Cardiovascular Health/How does blood pressure relate to diet?
-                </p>
-              </div>
-            </div>
-            <div class="project-card" id="project4">
-              <img
-                src="assets/images/project2.jpg"
-                alt="Project 2"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 4 📖</h3>
-                <p>
-                  Meal Planning for Seniors with Chronic Conditions 
-                </p>
-              </div>
-            </div>
-            <div class="project-card" id="project5">
-              <img
-                src="assets/images/project2.jpg"
-                alt="Project 2"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 5 💦</h3>
-                <p>
-                  Importance of Hydration for the Elderly 
-
-                </p>
-              </div>
-            </div>
-            <div class="project-card" id="project6">
-              <img
-                src="assets/images/project2.jpg"
-                alt="Project 2"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 6 💪</h3>
-                <p>
-                  Exercise and Food Synergy 
-                </p>
-              </div>
-            </div>
-            <div class="project-card" id="project7">
-              <img
-                src="assets/images/project2.jpg"
-                alt="Project 2"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 7 🧠</h3>
-                <p>
-                  Understanding Food Insecurity and Mental Health in the Elderly 
-
-                </p>
-              </div>
-            </div>
-            <div class="project-card" id="project8">
-              <img
-                src="assets/images/project1.jpg"
-                alt="Project 1"
-                class="project-image"
-              />
-              <div class="project-details">
-                <h3>Team 8 🥒</h3>
-                <p>
-                  The Role of Fiber in Senior Health
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="project-details"
-        class="project-details-section"
-        style="display: none"
-      >
-        <div class="container">
-          <h2 id="project-title">Project Title</h2>
-          <div class="project-details-content">
-            <img
-              id="project-image"
-              src=""
-              alt="Project Image"
-              class="project-image"
-            />
-            <p id="project-members">Group Members:</p>
-            <p id="project-type">Project Type</p>
-            <p id="project-description">Description of the project.</p>
-            <div id="project-behance">
-              <button>
-                <a href="" target="_blank" rel="noopener noreferrer">Design Info</a>
-              </button>
-            </div>
-        </div>
-        <button id="go-back" class="GB">Go Back</button>
-      </section>
-
-      <section id="contact" class="contact-section">
-        <div class="container">
-          <h2 class="section-title">Contact Us</h2>
-          <p>If you have any questions, feel free to contact us!</p>
-
-          <a
-            href="mailto:meganpalmquist@outlook.com?subject=Inquiry from Contact Form from HerronxYonsei Webpage"
-            class="email-button"
-          >
-            <button type="button">Email Us</button>
-          </a>
-        </div>
-      </section>
+      <div id="app"></div>
     </main>
 
     <!-- Footer -->
@@ -296,36 +119,6 @@
       type="text/javascript"
       src="https://cdn.emailjs.com/dist/email.min.js"
     ></script>
-    <script>
-      // Initialize EmailJS with your user ID
-      emailjs.init("EksaIfxFS12zDRbFk");
-
-      // Add event listener to the button
-      document
-        .getElementById("email-button")
-        .addEventListener("click", function () {
-          // Prepare the data you want to send
-          const emailData = {
-            to_name: "Megan Palmquist",
-            from_email: "meganpalmquist@outlook.com", // You can replace this with the dynamic value if needed
-            message:
-              "This is an inquiry from the contact page of the YonseixHerron Project webpage",
-            to_email: "meganpalmquist@outlook.com", // Replace with your actual email
-          };
-
-          // Send email using EmailJS
-          emailjs.send("service_14ybicu", "template_5tol5bu", emailData).then(
-            function (response) {
-              console.log("Email sent successfully", response);
-              alert("Your message has been sent!");
-            },
-            function (error) {
-              console.log("Error sending email", error);
-              alert("There was an error sending your message.");
-            }
-          );
-        });
-    </script>
 
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script src="app/app.js"></script>

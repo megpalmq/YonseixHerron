@@ -168,3 +168,56 @@ function initListeners() {
 $(document).ready(function () {
   initListeners(); // Initialize the project card click event listeners
 });
+function changeRoute() {
+  let hashTag = window.location.hash;
+  let pageID = hashTag.replace("#", "");
+
+  // Default to 'home' if no hash is set
+  if (pageID === "") {
+    pageID = "home";
+  }
+
+  // Dynamically load the page using the pageID
+  $.get(`assets/pages/${pageID}.html`, function (data) {
+    console.log("Data loaded: ");
+    $("#app").html(data);
+  }).fail(function () {
+    console.log("Error loading page: " + pageID);
+  });
+}
+
+function initURLListener() {
+  $(window).on("hashchange", changeRoute);
+  changeRoute();
+}
+
+$(document).ready(function () {
+  initURLListener();
+  changeRoute(); // Initial load
+  $(window).on("hashchange", changeRoute);
+  if ($("#map").length > 0) {
+    // Initialize the map
+    const map = L.map("map").setView([39.8283, -98.5795], 4); // Default center in USA
+
+    // Add tile layer (OpenStreetMap in this case)
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Add markers for food insecurity locations
+    const locations = [
+      { lat: 39.7684, lng: -86.158, popup: "Food Insecurity in Indianapolis" },
+      { lat: 37.5665, lng: 126.978, popup: "Food Insecurity in Seoul, Korea" },
+    ];
+
+    // Loop through the locations and add markers to the map
+    locations.forEach((location) => {
+      L.marker([location.lat, location.lng])
+        .addTo(map)
+        .bindPopup(location.popup);
+    });
+  } else {
+    console.log("Map container not found.");
+  }
+});
