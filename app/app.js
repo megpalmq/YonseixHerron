@@ -1,7 +1,27 @@
 // Mobile Menu Toggle
 const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.querySelector(".nav-links");
+let width = $(window).width();
 
+// Handle mousemove event
+$(window).on("mousemove", function (e) {
+  let normalizedPosition = e.pageX / (width / 2) - 1;
+  let speedSlow = 100 * normalizedPosition;
+  let speedFast = 200 * normalizedPosition;
+
+  $(".spanSlow").each(function () {
+    $(this).css("transform", `translate(${speedSlow}px)`);
+  });
+
+  $(".spanFast").each(function () {
+    $(this).css("transform", `translate(${speedFast}px)`);
+  });
+});
+
+// Recalculate width on window resize
+$(window).on("resize", function () {
+  width = $(window).width();
+});
 // Toggle the mobile menu when the menu button is clicked
 mobileMenu.addEventListener("click", () => {
   console.log("Mobile menu clicked");
