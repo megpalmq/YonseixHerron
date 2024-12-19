@@ -22,13 +22,12 @@ $(window).on("mousemove", function (e) {
 $(window).on("resize", function () {
   width = $(window).width();
 });
-// Toggle the mobile menu when the menu button is clicked
+
 mobileMenu.addEventListener("click", () => {
   console.log("Mobile menu clicked");
   navLinks.classList.toggle("open");
 });
 
-// Sticky Navbar Effect: Adds a class to change navbar styling on scroll
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 10) {
@@ -127,35 +126,11 @@ const projectData = {
     behance: "Full Project Behance/ Portofolio Link: #",
   },
 };
-
-// Function to display project details
-function showProjectDetails(projectId) {
-  const project = projectData[projectId];
-
-  if (project) {
-    // Update the content with the selected project details
-    $("#project-title").text(project.title);
-    $("#project-members").text(project.members);
-    $("#project-description").text(project.description);
-    $("#project-type").text(project.projectType);
-    $("#project-image").attr("src", project.image);
-
-    $("#project-behance a").attr("href", project.behance);
-
-    // Hide the projects section and show the project details section
-    $("#projects").hide();
-    $("#project-details").show();
-  }
+function navigateToProject(projectId) {
+  // Redirect to the corresponding project page
+  window.location.href = `./${projectId}.html`;
 }
 
-// Function to go back to the projects section
-$("#go-back").click(function () {
-  // Hide the project details section and show the projects section
-  $("#projects").show();
-  $("#project-details").hide();
-});
-
-// Initialize event listeners for the project cards
 function initListeners() {
   // Event listeners for project cards
   $("#project1").click(function () {
@@ -186,8 +161,9 @@ function initListeners() {
 }
 
 $(document).ready(function () {
-  initListeners(); // Initialize the project card click event listeners
+  initListeners();
 });
+
 function changeRoute() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#", "");
@@ -213,31 +189,79 @@ function initURLListener() {
 
 $(document).ready(function () {
   initURLListener();
-  changeRoute(); // Initial load
-  $(window).on("hashchange", changeRoute);
-  if ($("#map").length > 0) {
-    // Initialize the map
-    const map = L.map("map").setView([39.8283, -98.5795], 4); // Default center in USA
-
-    // Add tile layer (OpenStreetMap in this case)
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    // Add markers for food insecurity locations
-    const locations = [
-      { lat: 39.7684, lng: -86.158, popup: "Food Insecurity in Indianapolis" },
-      { lat: 37.5665, lng: 126.978, popup: "Food Insecurity in Seoul, Korea" },
-    ];
-
-    // Loop through the locations and add markers to the map
-    locations.forEach((location) => {
-      L.marker([location.lat, location.lng])
-        .addTo(map)
-        .bindPopup(location.popup);
-    });
-  } else {
-    console.log("Map container not found.");
-  }
+  changeRoute();
 });
+$(window).on("hashchange", changeRoute);
+if ($("#map").length > 0) {
+  // Initialize the map
+  const map = L.map("map").setView([39.8283, -98.5795], 4); // Default center in USA
+
+  // Add tile layer (OpenStreetMap in this case)
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  const locations = [
+    { lat: 39.7684, lng: -86.158, popup: "Food Insecurity in Indianapolis" },
+    { lat: 37.5665, lng: 126.978, popup: "Food Insecurity in Seoul, Korea" },
+  ];
+
+  // Loop through the locations and add markers to the map
+  locations.forEach((location) => {
+    L.marker([location.lat, location.lng]).addTo(map).bindPopup(location.popup);
+  });
+} else {
+  console.log("Map container not found.");
+}
+let slideIndex = 1;
+
+// Function to open the modal
+function openModal() {
+  document.getElementById("modal").style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+// Function to display the current slide
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+// Function to navigate through the slides
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Function to show the slide corresponding to the current index
+function showSlides(n) {
+  let slides = document
+    .getElementsByClassName("slides")[0]
+    .getElementsByTagName("img");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Show the current slide
+  slides[slideIndex - 1].style.display = "block";
+}
+
+// Optional: Close the modal when the user clicks outside of the modal content
+window.onclick = function (event) {
+  const modal = document.getElementById("modal");
+  if (event.target == modal) {
+    closeModal();
+  }
+};
